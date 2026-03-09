@@ -1,0 +1,6 @@
+dsim_work/*
+uvm-hello-world-main/*
+*.dpf
+*.log
+*.env
+*.db

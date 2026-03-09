@@ -86,8 +86,8 @@ module top_tb;
   // Connect virtual interfaces
   initial begin
     // Master agent uses master modport
-    virtual axi_lite_if #(AXI_LITE_ADDR_WIDTH, AXI_LITE_DATA_WIDTH) m_vif = axi_if;
-    virtual axi_lite_if #(AXI_LITE_ADDR_WIDTH, AXI_LITE_DATA_WIDTH) s_vif = axi_if;
+    automatic virtual axi_lite_if #(AXI_LITE_ADDR_WIDTH, AXI_LITE_DATA_WIDTH) m_vif = axi_if;
+    automatic virtual axi_lite_if #(AXI_LITE_ADDR_WIDTH, AXI_LITE_DATA_WIDTH) s_vif = axi_if;
 
     // For multiple instances, you can set them with different paths and configs
     uvm_config_db#(virtual axi_lite_if#(AXI_LITE_ADDR_WIDTH,AXI_LITE_DATA_WIDTH))::set(

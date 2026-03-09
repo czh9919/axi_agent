@@ -4,3 +4,4 @@ uvm-hello-world-main/*
 *.log
 *.env
 *.db
+*.mxd

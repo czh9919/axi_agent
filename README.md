@@ -52,7 +52,6 @@
 ```bash
 vcs -full64 -sverilog -ntb_opts uvm \
   -f rtl/rtl.f \
-  -f agent/axi_lite_agent.f \
   -f tb/tb.f
 ./simv +UVM_TESTNAME=axi_lite_base_test
 ```
@@ -61,7 +60,7 @@ vcs -full64 -sverilog -ntb_opts uvm \
 
 ```bash
 vlib work
-vlog -sv -f rtl/rtl.f -f agent/axi_lite_agent.f -f tb/tb.f
+vlog -sv -f rtl/rtl.f -f tb/tb.f
 vsim -c top_tb -do "run -all; quit" +UVM_TESTNAME=axi_lite_base_test
 ```
 
